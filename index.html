@@ -253,7 +253,7 @@ table tr:hover td {
 
 #referencias ul li {
     padding: 10px 15px;
-    background: #f8fafc;
+    background: white;
     margin-bottom: 8px;
     border-radius: 6px;
     border-left: 4px solid #1a3a5c;
@@ -261,7 +261,7 @@ table tr:hover td {
 }
 
 #referencias ul li:hover {
-    background: #f0f4f8;
+    background: white;
 }
 
 /* ----- RODAPÉ ----- */
@@ -480,6 +480,42 @@ footer p:last-child {
     box-shadow: 0 4px 16px rgba(26, 58, 92, 0.3);
 }
 
+ .container {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .coluna-imagem,
+    .coluna-descricao {
+        width: 50%;
+    }
+
+    .coluna-imagem img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+    .coluna-descricao {
+        padding: 20px;
+    }
+
+    /* Responsivo para celular */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .coluna-imagem,
+        .coluna-descricao {
+            width: 100%;
+        }
+    }
+
     </style>
 
 
@@ -540,7 +576,21 @@ footer p:last-child {
 
                 <h3>Tema</h3>
 
-            <img src="imagens/torneira-pingando-uma-das-causas-do-desperdicio-de-agua.webp" alt="Despedício de Água" >
+<div class="container">
+    <div class="coluna-imagem">
+          <img src="imagens/torneira-pingando-uma-das-causas-do-desperdicio-de-agua.webp" alt="Despedício de Água" >
+    </div>
+
+    <div class="coluna-descricao">
+        <h2>Título</h2>
+        <p>
+            Aqui você pode colocar a descrição do conteúdo,
+            produto ou serviço.
+        </p>
+    </div>
+</div>                
+
+         
 
 
                 <p>
